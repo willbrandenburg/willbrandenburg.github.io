@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Valentine's Card </title>
+<meta charset="utf-8">
+
+<style>
+body{background-color:salmon;}
+</style>
+
+
+<script>
+
+
+function headchange(x){
+document.getElementById(x).style.color="red"; 
+document.getElementById(x).style.fontSize="30pt";
+document.getElementById(x).style.textDecoration="underline";
+
+}
+function headchangeback(x){
+document.getElementById(x).style.color="black"; 
+document.getElementById(x).style.fontSize="24pt";
+document.getElementById(x).style.textDecoration="none";
+
+
+}
+
+function swap(x,y){
+a=document.getElementById(x).src;
+document.getElementById(x).src=document.getElementById(y).src;
+document.getElementById(y).src=a;
+
+}
+
+</script>
+</head>
+<body>
+
+<h1 onmouseover="headchange('header1')" onmouseout="headchangeback('header1')" id="header1"> Happy Valentine's Day! </h1>
+<br>
+<h4> Here's a couple pictures that remind me of us. </h4>
+<br>
+
+<img onmouseover="swap('peas','heart')" onmouseout="swap('heart','peas')" id="heart" src="heart.jpg" alt="heartpic" height="250px" width="250px">
+
+<img id="peas" src="peas.jpg" alt="peas in a pod" height="250px" width="250px"> 
+
+
+<br>
+<br>
+<h1 onmouseover="headchange('love')" onmouseout="headchangeback('love')" id="love"> I love you! </h1>
+
+
+
+
+
+</body>
+</html>
